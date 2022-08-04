@@ -222,3 +222,11 @@ function duplicateEntry(){
             }
     })
 }
+
+//UC8 Seach Person by City or State
+function searchPersonByStateorCity(){
+    let cityorStateName = prompt("Enter City or State Name: ");
+    let contactCityStateArray = contactsArray.filter((contacts) => contacts.state == cityorStateName || contacts.city == cityorStateName);
+    console.log(contactCityStateArray);
+}
+searchPersonByStateorCity();
