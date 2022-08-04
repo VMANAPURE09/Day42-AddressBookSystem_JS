@@ -199,3 +199,26 @@ console.log(contactsArray);
 let noOfContacts = contactsArray.reduce((contactsDetails) => contactsDetails + 1,0);
 console.log("Number of Contacts = "+noOfContacts);
 
+//UC7 Ensure no Duplicate Contact
+
+function duplicateEntry(){
+    let inputfirstname = prompt("Enter Firstname of the contact to be added");
+    let inputlastname = prompt("Enter Lastname of the contact to be added");
+    let inputaddress = prompt("Enter Address of the contact to be added");
+    let inputCity = prompt("Enter City of the contact to be added");
+    let inputstate = prompt("Enter State of the contact to be added");
+    let inputZip = prompt("Enter Zipcode of the contact to be added");
+    let inputphone = prompt("Enter Phone of the contact to be added");
+    let inputemail = prompt("Enter email of the contact to be added");
+    contactsArray.forEach(contactsdetails=>{
+        if(contactsdetails.firstName == inputname && contactsdetails.lastName==inputlastname && contactsdetails.address==inputaddress
+            && contactsdetails.city==inputCity && contactsdetails.state ==inputstate)
+            {
+                console.log("Duplicate entries are not allowed");
+            } 
+            else
+            {
+                AddContact(inputfirstname,inputlastname,inputaddress,inputCity,inputstate,inputZip,inputphone,inputemail);
+            }
+    })
+}
