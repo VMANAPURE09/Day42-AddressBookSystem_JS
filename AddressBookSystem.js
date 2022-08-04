@@ -230,3 +230,13 @@ function searchPersonByStateorCity(){
     console.log(contactCityStateArray);
 }
 searchPersonByStateorCity();
+
+
+//UC9 View Person by City or State
+function ViewPersonByStateorCity(){
+    let cityorStateName = prompt("Enter City or State Name: ");
+    let ViewcontactCityStateArray = contactsArray.filter((contacts) => contacts.state == cityorStateName || contacts.city == cityorStateName);
+    ViewcontactCityStateArray.forEach(contactperson=> {contactperson.firstName})
+    console.log(ViewcontactCityStateArray);
+}
+ViewPersonByStateorCity();
