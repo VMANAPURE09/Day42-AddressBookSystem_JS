@@ -1,110 +1,110 @@
-// console.log("Welcome to AddressBook System Using Javascript");
-// //UC1 Ability to create a Address Book Contact with first and last names,address, city, state, zip, phone number and email...RG----
-// class Contact{
-//     firstName;
-//     lastName;
-//     address;
-//     city;
-//     state;
-//     zip;
-//     phoneNumber;
-//     eMail;
+console.log("Welcome to AddressBook System Using Javascript");
+//UC1 Ability to create a Address Book Contact with first and last names,address, city, state, zip, phone number and email...RG----
+class Contact{
+    firstName;
+    lastName;
+    address;
+    city;
+    state;
+    zip;
+    phoneNumber;
+    eMail;
 
-//     constructor(...params){
-//         this.firstName = params[0];
-//         this.lastName = params[1];
-//         this.address = params[2];
-//         this.city = params[3];
-//         this.state = params[4];
-//         this.zip = params[5];
-//         this.phoneNumber = params[6];
-//         this.eMail = params[7];
-//     }
+    constructor(...params){
+        this.firstName = params[0];
+        this.lastName = params[1];
+        this.address = params[2];
+        this.city = params[3];
+        this.state = params[4];
+        this.zip = params[5];
+        this.phoneNumber = params[6];
+        this.eMail = params[7];
+    }
 
-//         toString(){
-//             return ("First Name: "+this.firstName+" \nLast Name: "+this.lastName+"\nAddress: "+this.address+"\nCity : "+this.city+"\nState: "+this.state+"\nZip Code : "+this.zip+"\nPhone: "+this.phoneNumber+ "\nE-Mail: "+this.eMail);
-//         }
-// }
-// let contactObj = new Contact("Vaibhav","Manapure","Wardha","Nagpur","Maharashtra",442305,9764510067,"manapure.vaibhav542@gmail.com");
-// console.log(contactObj.toString());
+        toString(){
+            return ("First Name: "+this.firstName+" \nLast Name: "+this.lastName+"\nAddress: "+this.address+"\nCity : "+this.city+"\nState: "+this.state+"\nZip Code : "+this.zip+"\nPhone: "+this.phoneNumber+ "\nE-Mail: "+this.eMail);
+        }
+}
+let contactObj = new Contact("Vaibhav","Manapure","Wardha","Nagpur","Maharashtra",442305,9764510067,"manapure.vaibhav542@gmail.com");
+console.log(contactObj.toString());
 
 
-// //UC2 Valid contact are added
+//UC2 Valid contact are added
 
-// let firstNamePattern = new RegExp('^[A-Z]{1}[a-z]{2,}$');
-// let lastNamePattern = new RegExp('^[A-Z]{1}[a-z]{2,}$');
-// let addressPattern = new RegExp('^[A-Za-z0-9 /,]{4,}$');
-// let cityPattern = new RegExp('^[A-Za-z]{4,}$');
-// let statePattern = new RegExp('^[A-Za-z]{4,}$');
-// let zipPattern = new RegExp('^[1-9]{1}[0-9]{5}$')
-// let phoneNoPattern = new RegExp('^[1-9]{2,}[ ][6-9]{1}[0-9]{9}$');
-// let eMailPattern = new RegExp('^([A-Za-z]{3,}([.a-z]*)[@][a-z]{2,}[.][a-z]{2,3}([.a-z]*))$')
+let firstNamePattern = new RegExp('^[A-Z]{1}[a-z]{2,}$');
+let lastNamePattern = new RegExp('^[A-Z]{1}[a-z]{2,}$');
+let addressPattern = new RegExp('^[A-Za-z0-9 /,]{4,}$');
+let cityPattern = new RegExp('^[A-Za-z]{4,}$');
+let statePattern = new RegExp('^[A-Za-z]{4,}$');
+let zipPattern = new RegExp('^[1-9]{1}[0-9]{5}$')
+let phoneNoPattern = new RegExp('^[1-9]{2,}[ ][6-9]{1}[0-9]{9}$');
+let eMailPattern = new RegExp('^([A-Za-z]{3,}([.a-z]*)[@][a-z]{2,}[.][a-z]{2,3}([.a-z]*))$')
 
-// class Contact{
+class Contact{
 
-//     constructor(...params){
-//         this.firstName = params[0];
-//         this.lastName = params[1];
-//         this.address = params[2];
-//         this.city = params[3];
-//         this.state = params[4];
-//         this.zip = params[5];
-//         this.phoneNumber = params[6];
-//         this.eMail = params[7];
-//     }
-//     get firstName() {return this._firstName};
-//     set firstName(firstName){
-//         if (firstNamePattern.test(firstName)) this._firstName = firstName;
-//         else throw 'First Name pattern is incorrect';
-//     }
-//     get lastName() {return this._lastName};
-//     set lastName(lastName){
-//         if (lastNamePattern.test(lastName)) this._lastName = lastName;
-//         else throw 'Last Name pattern is incorrect';
-//     }
-//     get address() {return this._address};
-//     set address(address){
-//         if (addressPattern.test(address)) this._address = address;
-//         else throw 'Address pattern is incorrect';
-//     }
-//     get state() {return this._state};
-//     set state(state){
-//         if (statePattern.test(state)) this._state = state;
-//         else throw 'State pattern is incorrect';
-//     }
-//     get city() {return this._city};
-//     set city(city){
-//         if (cityPattern.test(city)) this._city = city;
-//         else throw 'City pattern is incorrect';
-//     }
-//     get zip() {return this._zip};
-//     set zip(zip){
-//         if (zipPattern.test(zip)) this._zip = zip;
-//         else throw 'Zip pattern is incorrect';
-//     }
-//     get phoneNumber() {return this._phoneNumber};
-//     set phoneNumber(phoneNumber){
-//         if (phoneNoPattern.test(phoneNumber)) this._phoneNumber = phoneNumber;
-//         else throw 'PhoneNumber pattern is incorrect';
-//     }
-//     get eMail() {return this._eMail};
-//     set eMail(eMail){
-//         if (eMailPattern.test(eMail)) this._eMail = eMail;
-//         else throw 'Email pattern is incorrect';
-//     }
+    constructor(...params){
+        this.firstName = params[0];
+        this.lastName = params[1];
+        this.address = params[2];
+        this.city = params[3];
+        this.state = params[4];
+        this.zip = params[5];
+        this.phoneNumber = params[6];
+        this.eMail = params[7];
+    }
+    get firstName() {return this._firstName};
+    set firstName(firstName){
+        if (firstNamePattern.test(firstName)) this._firstName = firstName;
+        else throw 'First Name pattern is incorrect';
+    }
+    get lastName() {return this._lastName};
+    set lastName(lastName){
+        if (lastNamePattern.test(lastName)) this._lastName = lastName;
+        else throw 'Last Name pattern is incorrect';
+    }
+    get address() {return this._address};
+    set address(address){
+        if (addressPattern.test(address)) this._address = address;
+        else throw 'Address pattern is incorrect';
+    }
+    get state() {return this._state};
+    set state(state){
+        if (statePattern.test(state)) this._state = state;
+        else throw 'State pattern is incorrect';
+    }
+    get city() {return this._city};
+    set city(city){
+        if (cityPattern.test(city)) this._city = city;
+        else throw 'City pattern is incorrect';
+    }
+    get zip() {return this._zip};
+    set zip(zip){
+        if (zipPattern.test(zip)) this._zip = zip;
+        else throw 'Zip pattern is incorrect';
+    }
+    get phoneNumber() {return this._phoneNumber};
+    set phoneNumber(phoneNumber){
+        if (phoneNoPattern.test(phoneNumber)) this._phoneNumber = phoneNumber;
+        else throw 'PhoneNumber pattern is incorrect';
+    }
+    get eMail() {return this._eMail};
+    set eMail(eMail){
+        if (eMailPattern.test(eMail)) this._eMail = eMail;
+        else throw 'Email pattern is incorrect';
+    }
 
-//     toString(){
-//         return ("First Name: "+this.firstName+" \nLast Name: "+this.lastName+"\nAddress: "+this.address+"\nCity : "+this.city+"\nState: "+this.state+"\nZip Code : "+this.zip+"\nPhone: "+this.phoneNumber+ "\nE-Mail: "+this.eMail);
-//     }
-// }
+    toString(){
+        return ("First Name: "+this.firstName+" \nLast Name: "+this.lastName+"\nAddress: "+this.address+"\nCity : "+this.city+"\nState: "+this.state+"\nZip Code : "+this.zip+"\nPhone: "+this.phoneNumber+ "\nE-Mail: "+this.eMail);
+    }
+}
 
-// try{
-//     let contactObj = new Contact("Vaibhav","Manapure","Wardha","Nagpur","Maharashtra",442305,9764510067,"manapure.vaibhav542@gmail.com");
-//     console.log(contactObj.toString());
-// }
-// catch (ex){
-//     console.error(ex);
-// }
+try{
+    let contactObj = new Contact("Vaibhav","Manapure","Wardha","Nagpur","Maharashtra",442305,9764510067,"manapure.vaibhav542@gmail.com");
+    console.log(contactObj.toString());
+}
+catch (ex){
+    console.error(ex);
+}
 
 
 //UC3 Ability to add Contacts into Array
@@ -194,3 +194,8 @@ function DeletingContact(){
 }
 DeletingContact();
 console.log(contactsArray);
+
+//UC6 Finding Number of Contacts// 
+let noOfContacts = contactsArray.reduce((contactsDetails) => contactsDetails + 1,0);
+console.log("Number of Contacts = "+noOfContacts);
+
